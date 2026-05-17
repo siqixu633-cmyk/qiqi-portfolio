@@ -5,5 +5,6 @@ const nextConfig: NextConfig = {
     externalDir: true,
   },
 };
+const nextConfig: NextConfig = {};
 
 export default nextConfig;
