@@ -122,6 +122,11 @@ function Navbar() {
     >
       <nav className="mx-auto flex h-full w-[1460px] items-center justify-between" aria-label="Main navigation">
         <a className="flex items-center gap-3" href="#home" aria-label="QiQi Portfolio Home">
+          <Image src={logoPurple} alt="" className="h-[40px] w-[40px] object-contain" priority />
+          <span className="text-[14px] font-semibold uppercase tracking-[0.16em] text-white">QIQI</span>
+        </a>
+        <div className="flex items-center gap-[42px]">
+          {navItems.slice(0, 3).map((item) => (
           <Image src={logoPurple} alt="" className="h-10 w-10 object-contain" priority />
           <span className="text-[14px] font-semibold uppercase tracking-[0.16em] text-white">QIQI</span>
         </a>
@@ -135,6 +140,12 @@ function Navbar() {
               {item}
             </a>
           ))}
+          <a
+            href="#contact"
+            className="inline-flex h-[68px] w-[180px] items-center justify-center rounded-full bg-gradient-to-r from-[#A855F7] to-[#EC4899] text-[12px] font-semibold uppercase tracking-[0.08em] text-white shadow-[0_8px_30px_rgba(168,85,247,0.25)]"
+          >
+            Contact
+          </a>
         </div>
       </nav>
     </header>
@@ -148,6 +159,8 @@ function Hero() {
       className="h-[1080px] bg-cover bg-center bg-no-repeat pt-[190px]"
       style={{ backgroundImage: `url(${heroBg.src})` }}
     >
+      <div className="mx-auto grid w-[1460px] grid-cols-[563px_737px] items-start gap-[160px]">
+        <div className="pt-[118px]">
       <div className="mx-auto grid w-[1460px] grid-cols-[560px_1fr] items-center gap-[86px]">
         <div>
           <p className="text-[12px] font-semibold uppercase leading-[1.4] tracking-[0.16em] text-white/50">QIQI PORTFOLIO</p>
@@ -159,12 +172,16 @@ function Hero() {
           </p>
           <a
             href="#projects"
+            className="mt-10 inline-flex h-[68px] w-[180px] items-center justify-center rounded-full border border-white/15 bg-gradient-to-br from-[#A855F7] to-[#EC4899] text-[14px] font-semibold uppercase tracking-[0.08em] shadow-[0_4px_20px_rgba(168,85,247,0.15)]"
             className="mt-10 inline-flex h-[68px] min-w-[180px] items-center justify-center rounded-full border border-white/15 bg-gradient-to-br from-[#A855F7] to-[#EC4899] px-10 text-[14px] font-semibold uppercase tracking-[0.08em] shadow-[0_4px_20px_rgba(168,85,247,0.15)]"
           >
             EXPLORE
           </a>
         </div>
 
+        <div className="w-[737px]">
+          <article
+            className="relative h-[394px] w-[713px] overflow-hidden rounded-[20px] border border-white/10 bg-cover bg-center shadow-[0_4px_20px_rgba(0,0,0,0.2)]"
         <div className="grid grid-cols-2 gap-[22px]">
           <article
             className="relative col-span-2 h-[394px] overflow-hidden rounded-[20px] border border-white/10 bg-cover bg-center shadow-[0_4px_20px_rgba(0,0,0,0.2)]"
@@ -183,6 +200,24 @@ function Hero() {
             <Image
               src={heroMainVisual}
               alt="Futuristic portfolio hero visual"
+              className="absolute bottom-[-138px] right-[-8px] w-[455px] object-contain"
+              priority
+            />
+          </article>
+          <div className="mt-[22px] flex gap-[22px]">
+            <article
+              className="flex h-[335px] w-[358px] items-end overflow-hidden rounded-[20px] border border-white/10 bg-cover bg-center p-[38px] shadow-[0_4px_20px_rgba(0,0,0,0.2)]"
+              style={{ backgroundImage: `url(${heroCardTwoBg.src})` }}
+            >
+              <p className="max-w-[240px] text-[32px] font-bold leading-[1.18] tracking-[-0.02em]">Designed Outside the Lines.</p>
+            </article>
+            <article
+              className="flex h-[335px] w-[357px] items-end justify-end overflow-hidden rounded-[20px] border border-white/10 bg-cover bg-center p-[38px] text-right shadow-[0_4px_20px_rgba(0,0,0,0.2)]"
+              style={{ backgroundImage: `url(${heroCardThreeBg.src})` }}
+            >
+              <p className="max-w-[260px] text-[32px] font-bold leading-[1.18] tracking-[-0.02em]">Unlimited Possibilities Is More Than a Concept.</p>
+            </article>
+          </div>
               className="absolute bottom-[-138px] right-[14px] w-[455px] object-contain"
               priority
             />
